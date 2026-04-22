@@ -71,7 +71,7 @@ export const portfolio: PortfolioContent = {
       'Structured relational modeling for assets, employees, departments, and transaction history.',
     ],
     links: {
-      github: 'https://github.com/Addisu544/',
+      github: 'https://github.com/Addisu544/asset-management',
     },
   },
   selectedProjects: [
@@ -83,29 +83,29 @@ export const portfolio: PortfolioContent = {
         'Built a multi-role platform (Admin, Recruiter, Employee) with JWT auth, job lifecycle flows, application tracking, and CV uploads using Prisma + PostgreSQL.',
       tags: ['JWT auth', 'RBAC roles', 'Prisma + PostgreSQL', 'File uploads'],
       links: {
-        github: 'https://github.com/Addisu544/',
+        github: 'https://github.com/Addisu544/job-board',
       },
     },
     {
-      title: 'Secure Notes Vault',
-      impact: 'Protected notes with enforced access boundaries and reviewable change history.',
+      title: 'Food Ordering Platform',
+      impact: 'End-to-end role-based ordering and restaurant workflow system with real-time order lifecycle tracking.',
       action:
-        'Designed an authenticated notes service with authorization checks at the API boundary and structured CRUD flows to prevent unauthorized reads/writes.',
-      tags: ['Access boundaries', 'Audit-friendly changes', 'API security'],
+        'Built a full-stack system supporting customer ordering, admin management, kitchen workflow, and delivery tracking. Implemented JWT authentication with role-based access (Administrator, Chef, Delivery, Customer), and structured order state transitions from queue to delivery.',
+      tags: ['RBAC system', 'Order lifecycle', 'JWT auth', 'Dual database'],
       links: {
-        github: 'https://github.com/Addisu544/',
+        github: 'https://github.com/Addisu544/online-pizza-ordering',
       },
     },
     {
-      title: 'Rate-Limited API Gateway',
-      impact: 'Stabilized API performance under burst traffic and reduced abuse risk.',
+      title: 'MovieHub',
+      impact: 'High-performance movie discovery interface with real-time search, filtering, and infinite scrolling.',
       action:
-        'Implemented a lightweight gateway layer with per-identity throttling, consistent error contracts, and instrumentation hooks for operational visibility.',
-      tags: ['Rate limiting', 'Predictable errors', 'Operational signals'],
+        'Developed a frontend-focused SPA using React + Vite integrating TMDB APIs. Implemented infinite scrolling with IntersectionObserver, client-side filtering/sorting, and localStorage-backed favorites with theme persistence.',
+      tags: ['Infinite scroll', 'API integration', 'State persistence', 'Responsive UI'],
       links: {
-        github: 'https://github.com/Addisu544/',
+        github: 'https://github.com/Addisu544/MovieHub',
       },
-    },
+    }
   ],
   professionalContext: {
     lines: [

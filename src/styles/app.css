@@ -106,34 +106,83 @@
 
 .mobileMenuOverlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 20;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease-out;
 }
 
 .mobileMenu {
-  width: min(320px, 84vw);
-  height: 100%;
-  background: var(--panel);
+  width: min(320px, 78vw);
+  height: 100vh;
+  background: var(--bg);
   border-left: 1px solid var(--border);
-  padding: 16px;
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 220ms ease-out;
+}
+
+.mobileMenuOverlay.isOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobileMenu.isOpen {
   transform: translateX(0);
-  transition: transform 140ms ease-out;
+}
+
+.mobileMenuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.mobileMenuTitle {
+  font-family: var(--mono);
+  font-weight: 650;
+  letter-spacing: -0.2px;
+}
+
+.menuCloseButton {
+  height: 40px;
+  width: 44px;
+  border-radius: var(--radiusSm);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.menuCloseButton:hover {
+  background: color-mix(in oklab, var(--panel) 72%, transparent);
 }
 
 .mobileNav {
   display: grid;
-  gap: 10px;
-  margin-top: 8px;
+  gap: 16px;
+  margin-top: 18px;
 }
 
 .mobileNavLink {
   text-decoration: none;
   color: var(--text);
   font-family: var(--mono);
-  padding: 12px 10px;
+  width: 100%;
+  padding: 14px 12px;
   border-radius: var(--radiusSm);
   border: 1px solid var(--border);
   background: color-mix(in oklab, var(--bg) 80%, var(--panel));

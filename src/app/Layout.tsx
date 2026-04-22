@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { useEffect, useId, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 
 type LayoutProps = {
   children: ReactNode
@@ -8,6 +8,8 @@ type LayoutProps = {
 export function Layout({ children }: LayoutProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuId = useId()
+  const menuButtonRef = useRef<HTMLButtonElement | null>(null)
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null)
 
   useEffect(() => {
     if (!menuOpen) return
@@ -15,6 +17,25 @@ export function Layout({ children }: LayoutProps) {
     document.body.style.overflow = 'hidden'
     return () => {
       document.body.style.overflow = prev
+    }
+  }, [menuOpen])
+
+  useEffect(() => {
+    if (!menuOpen) return
+    const prevActive = document.activeElement as HTMLElement | null
+    queueMicrotask(() => closeButtonRef.current?.focus())
+
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        setMenuOpen(false)
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+      ;(prevActive ?? menuButtonRef.current)?.focus?.()
     }
   }, [menuOpen])
 
@@ -48,6 +69,7 @@ export function Layout({ children }: LayoutProps) {
             aria-expanded={menuOpen}
             aria-controls={menuId}
             onClick={() => setMenuOpen((v) => !v)}
+            ref={menuButtonRef}
           >
             <span className="menuIcon" aria-hidden="true">
               <span />
@@ -58,37 +80,49 @@ export function Layout({ children }: LayoutProps) {
         </div>
       </header>
 
-      {menuOpen ? (
+      <div
+        className={`mobileMenuOverlay${menuOpen ? ' isOpen' : ''}`}
+        role="presentation"
+        onClick={() => setMenuOpen(false)}
+        aria-hidden={!menuOpen}
+      >
         <div
-          className="mobileMenuOverlay"
-          role="presentation"
-          onClick={() => setMenuOpen(false)}
+          id={menuId}
+          className={`mobileMenu${menuOpen ? ' isOpen' : ''}`}
+          role="dialog"
+          aria-modal={menuOpen ? 'true' : undefined}
+          aria-label="Navigation"
+          onClick={(e) => e.stopPropagation()}
         >
-          <div
-            id={menuId}
-            className="mobileMenu"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Navigation"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <nav className="mobileNav" aria-label="Mobile">
-              <a className="mobileNavLink" href="#flagship" onClick={() => setMenuOpen(false)}>
-                Flagship
-              </a>
-              <a className="mobileNavLink" href="#projects" onClick={() => setMenuOpen(false)}>
-                Projects
-              </a>
-              <a className="mobileNavLink" href="#context" onClick={() => setMenuOpen(false)}>
-                Context
-              </a>
-              <a className="mobileNavLink" href="#contact" onClick={() => setMenuOpen(false)}>
-                Contact
-              </a>
-            </nav>
+          <div className="mobileMenuHeader">
+            <div className="mobileMenuTitle">Navigation</div>
+            <button
+              type="button"
+              className="menuCloseButton"
+              aria-label="Close menu"
+              onClick={() => setMenuOpen(false)}
+              ref={closeButtonRef}
+            >
+              <span aria-hidden="true">×</span>
+            </button>
           </div>
+
+          <nav className="mobileNav" aria-label="Mobile">
+            <a className="mobileNavLink" href="#flagship" onClick={() => setMenuOpen(false)}>
+              Flagship
+            </a>
+            <a className="mobileNavLink" href="#projects" onClick={() => setMenuOpen(false)}>
+              Projects
+            </a>
+            <a className="mobileNavLink" href="#context" onClick={() => setMenuOpen(false)}>
+              Context
+            </a>
+            <a className="mobileNavLink" href="#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
+          </nav>
         </div>
-      ) : null}
+      </div>
 
       {children}
 
