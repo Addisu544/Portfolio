@@ -1,0 +1,67 @@
+:root {
+  /* Color system (dark default) */
+  color-scheme: dark;
+  --bg: #0b0c10;
+  --panel: #11131a;
+  --text: #e6e8ee;
+  --muted: #a8b0c0;
+  --faint: #7f889c;
+  --border: #232635;
+  --focus: #7dd3fc;
+
+  /* Accent is used sparingly for CTAs only */
+  --accent: #c7d2fe;
+  --accentText: #0b0c10;
+
+  /* Typography (system fonts; no webfont requests) */
+  --sans:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
+  --mono:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+
+  /* Spacing / layout */
+  --radius: 10px;
+  --radiusSm: 8px;
+  --max: 1120px;
+  --gutter: 18px;
+
+  --space-1: 6px;
+  --space-2: 10px;
+  --space-3: 14px;
+  --space-4: 18px;
+  --space-5: 26px;
+  --space-6: 38px;
+
+  /* Type scale (mobile-first) */
+  --textSize: 16px;
+  --line: 1.55;
+  --h1: 30px;
+  --h2: 16px;
+  --h3: 14px;
+}
+
+@media (min-width: 720px) {
+  :root {
+    --gutter: 22px;
+    --textSize: 17px;
+    --h1: 40px;
+    --h2: 18px;
+    --h3: 15px;
+  }
+}
+
