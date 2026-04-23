@@ -18,6 +18,7 @@ export function ContactSection() {
           <ButtonLink intent="primary" href={`mailto:${person.links.email}`}>
             Email
           </ButtonLink>
+          <ExternalLink className="btn btnSecondary" href={person.links.linkedin}>LinkedIn</ExternalLink>
           <ExternalLink className="btn btnSecondary" href={person.links.github}>
             GitHub
           </ExternalLink>

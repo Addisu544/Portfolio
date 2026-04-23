@@ -7,7 +7,8 @@ export const portfolio: PortfolioContent = {
     stackLine: 'Core: React · TypeScript · .NET · Node · PostgreSQL · SQL Server',
     identityLine: 'Backend-first full-stack: secure APIs, clean boundaries, measurable latency.',
     links: {
-      github: 'https://github.com/Addisu544/',
+      linkedin: 'https://www.linkedin.com/in/addisu544',
+      github: 'https://github.com/Addisu544',
       email: 'addisuagerie544@gmail.com',
       telegram: 'https://t.me/addisu544',
       resumePath: '/cv.pdf',

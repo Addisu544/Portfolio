@@ -27,6 +27,7 @@ export function HeroSection() {
             </div>
 
             <div className="linksRow" aria-label="Profile links">
+              <ExternalLink href={person.links.linkedin}>LinkedIn</ExternalLink>
               <ExternalLink href={person.links.github}>GitHub</ExternalLink>
               <a href={`mailto:${person.links.email}`}>Email</a>
               <ExternalLink href={person.links.telegram}>Telegram</ExternalLink>
