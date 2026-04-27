@@ -1,126 +1,4 @@
-// import type { PortfolioContent } from './types'
 
-// export const portfolio: PortfolioContent = {
-//   person: {
-//     name: 'Addisu Agerie',
-//     availability: 'Open to opportunities',
-//     stackLine: 'Core: React · TypeScript · .NET · Node · PostgreSQL · SQL Server',
-//     identityLine: 'Backend-first full-stack: secure APIs, clean boundaries, measurable latency.',
-//     links: {
-//       linkedin: 'https://www.linkedin.com/in/addisu544',
-//       github: 'https://github.com/Addisu544',
-//       email: 'addisuagerie544@gmail.com',
-//       telegram: 'https://t.me/addisu544',
-//       resumePath: '/cv.pdf',
-//     },
-//   },
-//   hero: {
-//     headline: 'Full-stack engineer building secure, high-performance systems.',
-//     subheadline: 'Full-stack engineer @ INSA — focused on security, performance, and system design.',
-//     primaryCtaLabel: 'View flagship project',
-//     secondaryCtaLabel: 'Download CV / Contact',
-//     proofBullets: [
-//       'JWT + RBAC enforced at the API boundary for workflow-critical actions.',
-//       'Transaction-first lifecycle tracking with searchable custody history and audit-ready records.',
-//       'Layered .NET architecture to keep workflow rules stable as features scale.',
-//     ],
-//   },
-//   flagship: {
-//     id: 'flagship',
-//     title: 'Asset Management System',
-//     impact:
-//       'Centralized asset issuance and return workflows with audit-ready tracking and role-based access for organizations.',
-//     context: [
-//       'Asset issuance and returns were hard to track across departments, causing slow handoffs and inconsistent records.',
-//       'Built for internal org teams: admins managing inventory, departments issuing assets, and employees responsible for assigned equipment.',
-//     ],
-//     action: {
-//       summary: [
-//         'Designed and built a full-stack system that models the full asset lifecycle and enforces controlled transaction workflows.',
-//         'Kept access boundaries explicit so sensitive actions remain role-restricted and reviewable.',
-//       ],
-//       architecture: [
-//         'Clean/layered .NET architecture with separate API boundary, application services, domain rules, and persistence.',
-//         'Separation of concerns across auth, workflow rules, and file handling to reduce coupling and improve testability.',
-//       ],
-//       backend: [
-//         '.NET 8 Minimal API with predictable request/response contracts.',
-//         'Entity Framework Core for relational persistence and lifecycle-centric modeling.',
-//         'SQL Server schema designed around asset state + transaction history.',
-//         'JWT authentication with role-based access control enforced at the API boundary.',
-//       ],
-//       frontend: [
-//         'React + TypeScript + Vite UI focused on lifecycle state, transaction history, and administrative flows.',
-//       ],
-//       features: [
-//         'Asset lifecycle management (issue/return tracking) with transaction history.',
-//         'Department and employee management with assignment visibility.',
-//         'Transaction workflows with authorization checks.',
-//         'File/image uploads for asset identification and documentation.',
-//       ],
-//     },
-//     result: [
-//       'Reduced operational friction by replacing manual tracking with a single system of record for custody and lifecycle state.',
-//       'Improved asset visibility across departments through consistent assignment history and searchable transactions.',
-//       'Enforced secure access control with JWT + RBAC so only authorized roles can issue, return, or administer inventory.',
-//       'Kept the system scalable and maintainable by isolating workflow rules behind layered boundaries.',
-//     ],
-//     highlights: [
-//       'Clean architecture separation keeps workflow logic isolated from transport and persistence.',
-//       'Secure authentication and authorization enforced at the API boundary (JWT + RBAC).',
-//       'Scalable API design with explicit workflow transitions and predictable contracts.',
-//       'Structured relational modeling for assets, employees, departments, and transaction history.',
-//     ],
-//     links: {
-//       github: 'https://github.com/Addisu544/asset-management',
-//     },
-//   },
-//   selectedProjects: [
-//     {
-//       title: 'Job Board System',
-//       impact:
-//         'Role-controlled hiring workflow from posting to application review with traceable job and application state.',
-//       action:
-//         'Built a multi-role platform (Admin, Recruiter, Employee) with JWT auth, job lifecycle flows, application tracking, and CV uploads using Prisma + PostgreSQL.',
-//       tags: ['JWT auth', 'RBAC roles', 'Prisma + PostgreSQL', 'File uploads'],
-//       links: {
-//         github: 'https://github.com/Addisu544/job-board',
-//       },
-//     },
-//     {
-//       title: 'Food Ordering Platform',
-//       impact: 'End-to-end role-based ordering and restaurant workflow system with real-time order lifecycle tracking.',
-//       action:
-//         'Built a full-stack system supporting customer ordering, admin management, kitchen workflow, and delivery tracking. Implemented JWT authentication with role-based access (Administrator, Chef, Delivery, Customer), and structured order state transitions from queue to delivery.',
-//       tags: ['RBAC system', 'Order lifecycle', 'JWT auth', 'Dual database'],
-//       links: {
-//         github: 'https://github.com/Addisu544/online-pizza-ordering',
-//       },
-//     },
-//     {
-//       title: 'MovieHub',
-//       impact: 'High-performance movie discovery interface with real-time search, filtering, and infinite scrolling.',
-//       action:
-//         'Developed a frontend-focused SPA using React + Vite integrating TMDB APIs. Implemented infinite scrolling with IntersectionObserver, client-side filtering/sorting, and localStorage-backed favorites with theme persistence.',
-//       tags: ['Infinite scroll', 'API integration', 'State persistence', 'Responsive UI'],
-//       links: {
-//         github: 'https://github.com/Addisu544/MovieHub',
-//       },
-//     }
-//   ],
-//   professionalContext: {
-//     lines: [
-//       'INSA (Information Network Security Agency) — full-stack engineer on security-critical systems.',
-//       'Focus: secure API boundaries, performance budgets, and scalable system design.',
-//       'I optimize for measurable reliability: predictable contracts, controlled workflows, and observability-ready services.',
-//     ],
-//     edgeLine: 'I ramp fast on unfamiliar systems and turn ambiguity into production-ready decisions.',
-//   },
-//   contact: {
-//     heading: 'Contact',
-//     ctaLine: 'Reach out for backend-heavy full-stack roles focused on secure, high-performance systems.',
-//   },
-// }
 
 
 import type { PortfolioContent } from './types'
@@ -256,6 +134,8 @@ export const portfolio: PortfolioContent = {
 
       links: {
         github: 'https://github.com/Addisu544/MovieHub',
+        demo: 'https://moviehub544.netlify.app'
+
       },
     },
   ],
