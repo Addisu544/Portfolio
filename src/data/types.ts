@@ -36,6 +36,8 @@ export type SelectedProject = {
   links: {
     github?: string
     demo?: string
+    dockerhub?: string
+
   }
 }
 
