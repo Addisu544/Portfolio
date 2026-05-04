@@ -139,6 +139,21 @@ export const portfolio: PortfolioContent = {
 
       },
     },
+    {
+  title: 'Hiwas NPP (Fullstack CMS Platform)',
+  impact:
+    'Secure fullstack CMS with public website and admin panel for managing newsletters and media content.',
+
+  action:
+    'Built a MERN-based system with JWT auth, role-based admin dashboard, and CRUD-driven content management. Implemented file uploads (images/PDFs) using Multer with MongoDB-backed persistence and protected API routes.',
+
+  tags: ['MERN stack', 'JWT auth', 'CMS', 'File uploads', 'RBAC'],
+
+  links: {
+    demo: 'hiwasnewspp.netlify.app',
+  },
+}
+    
   ],
 
   professionalContext: {
