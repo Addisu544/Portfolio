@@ -150,7 +150,7 @@ export const portfolio: PortfolioContent = {
   tags: ['MERN stack', 'JWT auth', 'CMS', 'File uploads', 'RBAC'],
 
   links: {
-    demo: 'hiwasnewspp.netlify.app',
+    demo: 'https://hiwasnewspp.netlify.app',
   },
 }
     
