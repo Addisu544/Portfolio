@@ -119,7 +119,7 @@ export const portfolio: PortfolioContent = {
       tags: ['RBAC system', 'Order lifecycle', 'JWT auth', 'Multi-role workflows'],
 
       links: {
-        github: 'https://github.com/Addisu544/online-pizza-ordering',
+        github: 'https://github.com/Addisu544/pizza-ordering-platform',
       },
     },
 
