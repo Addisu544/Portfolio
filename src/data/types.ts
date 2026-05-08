@@ -25,6 +25,7 @@ export type FlagshipProject = {
   links: {
     github: string
     demo?: string
+    dockerhub?: string
   }
 }
 

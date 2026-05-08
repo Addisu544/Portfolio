@@ -92,7 +92,12 @@ export function FlagshipSection() {
           <ExternalLink className="btn btnPrimary" href={flagship.links.github}>
             GitHub
           </ExternalLink>
-          {flagship.links.demo ? (
+          {flagship.links.dockerhub ? (
+            <ExternalLink className="btn btnSecondary" href={flagship.links.dockerhub}>
+              DockerHub
+            </ExternalLink>
+          ) : null}
+           {flagship.links.demo ? (
             <ExternalLink className="btn btnSecondary" href={flagship.links.demo}>
               Live demo
             </ExternalLink>
